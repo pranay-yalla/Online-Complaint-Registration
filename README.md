@@ -1,4 +1,3 @@
-# Online-Complaint-Registry
 # Online Complaint Registration System
 
 ## Overview
