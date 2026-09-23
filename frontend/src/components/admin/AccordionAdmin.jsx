@@ -36,7 +36,7 @@ const AccordionAdmin = () => {
 
   const handleSelection = async (agentId, complaintId, status, agentName) => {
     try {
-      await axios.get(`http://localhost:8000/AgentUsers/${agentId}`);
+      await axios.get(`https://online-complaint-registration-fdum.onrender.com/AgentUsers/${agentId}`);
       const assignedComplaint = {
         agentId,
         complaintId,
@@ -44,7 +44,7 @@ const AccordionAdmin = () => {
         agentName,
       };
 
-      await axios.post('http://localhost:8000/assignedComplaints', assignedComplaint);
+      await axios.post('https://online-complaint-registration-fdum.onrender.com/assignedComplaints', assignedComplaint);
       const updatedComplaintList = complaintList.filter((complaint) => complaint.id !== complaintId);
       setComplaintList(updatedComplaintList);
       alert(`Compliant assigned to the Agent ${agentName}`)
