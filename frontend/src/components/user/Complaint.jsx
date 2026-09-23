@@ -91,7 +91,7 @@ const Complaint = () => {
                   <textarea name="comment" onChange={handleChange} value={userComplaint.comment} className="form-control" required></textarea>
                </div>
                <div className="text-center p-1 col-12">
-                  <button type="submit" onClick={handleSubmit} className="mt-2 btn btn-success">Register</button>
+<button type="submit" className="mt-2 btn btn-success">Register</button>         
                </div>
             </form>
          </div>
