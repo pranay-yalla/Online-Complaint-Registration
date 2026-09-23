@@ -19,8 +19,8 @@ const Login = () => {
 
    const handleSubmit = async (e) => {
       e.preventDefault();
-      await axios.post("http://localhost:8000/Login", user)
-         .then((res) => {
+await axios.post("https://online-complaint-registration-fdum.onrender.com/Login", user)
+   .then((res) => {
             alert("Successfully logged in");
             localStorage.setItem("user", JSON.stringify(res.data));
             const isLoggedIn = JSON.parse(localStorage.getItem("user"));
