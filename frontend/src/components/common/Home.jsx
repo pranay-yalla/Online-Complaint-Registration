@@ -30,7 +30,7 @@ const Home = () => {
                   </li> */}
                   <li className="nav-item mb-2">
                      <Link
-                     to={'/signup'}
+                     to={'/Signup'}
                         className={`nav-link text-light `}
                      >
                         SignUp
@@ -38,7 +38,7 @@ const Home = () => {
                   </li>
                   <li className="nav-item mb-2">
                      <Link
-                     to={'/login'}
+                     to={'/Login'}
                         className={`nav-link text-light `}
                      >
                         Login
