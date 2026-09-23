@@ -26,8 +26,8 @@ const SignUp = () => {
    const handleSubmit = async (e) => {
       e.preventDefault()
       const updatedUser = { ...user, userType: title };
-      axios.post("http://localhost:8000/SignUp", updatedUser)
-         .then((res) => {
+axios.post("https://online-complaint-registration-fdum.onrender.com/SignUp", updatedUser)
+   .then((res) => {
             alert("record submitted")
             JSON.stringify(res.data.user)
          })
