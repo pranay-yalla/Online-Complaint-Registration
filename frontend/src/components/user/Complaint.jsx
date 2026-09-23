@@ -36,7 +36,7 @@ const Complaint = () => {
       e.preventDefault()
       const user = JSON.parse(localStorage.getItem('user'))
       const { _id } = user
-      axios.post(`http://localhost:8000/Complaint/${_id}`, userComplaint)
+      axios.post(`https://online-complaint-registration-fdum.onrender.com/Complaint/${_id}`, userComplaint)
          .then(res => {
             JSON.stringify(res.data.userComplaint)
             alert("Your Complaint has been send!!")
