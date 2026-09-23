@@ -14,7 +14,7 @@ const Status = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     
     const { _id } = user;
-    axios.get(`http://localhost:8000/status/${_id}`)
+    axios.get(`https://online-complaint-registration-fdum.onrender.com/status/${_id}`)
       .then((res) => {
         setStatusCompliants(res.data);
       })
