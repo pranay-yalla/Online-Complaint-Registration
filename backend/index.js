@@ -8,7 +8,7 @@ const {
   MessageSchema,
 } = require("./Schema");
 const app = express();
-const PORT = 8000;
+const PORT =process.env.PORt || 8000;
 
 /**************************************** */
 app.use(express.json());
