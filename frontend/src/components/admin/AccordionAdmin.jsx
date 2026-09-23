@@ -12,7 +12,7 @@ const AccordionAdmin = () => {
   useEffect(() => {
     const getComplaints = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/status');
+        const response = await axios.get('https://online-complaint-registration-fdum.onrender.com/status');
         const complaints = response.data;
         setComplaintList(complaints);
       } catch (error) {
@@ -23,7 +23,7 @@ const AccordionAdmin = () => {
 
     const getAgentsRecords = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/AgentUsers');
+        const response = await axios.get('https://online-complaint-registration-fdum.onrender.com/AgentUsers');
         const agents = response.data;
         setAgentList(agents);
       } catch (error) {
