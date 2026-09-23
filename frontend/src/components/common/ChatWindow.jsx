@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import axios from 'axios';
 
 
@@ -8,18 +8,20 @@ const ChatWindow = (props) => {
    const messageWindowRef = useRef(null);
    const [messageList, setMessageList] = useState([]);
 
-   const fetchMessageList = async () => {
-      try {
-         const response = await axios.get(`https://online-complaint-registration-fdum.onrender.com/messages/${props.complaintId}`);
-         setMessageList(response.data);
-      } catch (error) {
-         console.error('Error fetching messages:', error);
-      }
-   };
+   const fetchMessageList = useCallback(async () => {
+  try {
+    const response = await axios.get(
+      `https://online-complaint-registration-fdum.onrender.com/messages/${props.complaintId}`
+    );
+    setMessageList(response.data);
+  } catch (error) {
+    console.error('Error fetching messages:', error);
+  }
+}, [props.complaintId]);
 
    useEffect(() => {
-      fetchMessageList(props.complaintId, setMessageList);
-   }, [props.complaintId]);
+  fetchMessageList();
+}, [fetchMessageList]);
 
    useEffect(() => {
       scrollToBottom();
